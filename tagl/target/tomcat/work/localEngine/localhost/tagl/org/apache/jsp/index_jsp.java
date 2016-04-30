@@ -70,9 +70,9 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <label>Name </label><input type=\"text\"ng-model=\"student.name\"/><br/>\r\n");
       out.write("        \t    <label>Firstname </label><input type=\"text\" ng-model=\"student.firstname\"/><br/>\r\n");
       out.write("        \t    <label>Age </label><input type=\"text\" name=\"age\" ng-model=\"student.age\"/><br/>\r\n");
-      out.write("        \t    <label>Student number </label><input type=\"text\" ng-model=\"student.number\"/><br/> \r\n");
-      out.write("    \t\t\t<input type=\"button\" value=\"SEND\" ng-click=\"request()\"/>\r\n");
-      out.write("            \r\n");
+      out.write("        \t    <label>Student number </label><input type=\"text\" ng-model=\"student.studentNumber\"/><br/> \r\n");
+      out.write("    \t\t\t<input type=\"button\" value=\"SEND\" ng-click=\"request()\"/><br><br>\r\n");
+      out.write("                <label>Search student by student number</label><input type=\"text\" placeholder=\"student number\" ng-model=\"studentNumber\"></input><br/><input type=\"button\" value=\"SEARCH\" ng-click=\"getStudent()\"></input>\r\n");
       out.write("            </form>\r\n");
       out.write("    </body>\r\n");
       out.write("</html>\r\n");

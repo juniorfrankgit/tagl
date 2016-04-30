@@ -22,6 +22,17 @@ public class MainServlet extends HttpServlet{
 	private static final long serialVersionUID = 1L;
 	private final RedisServer server = new RedisServer();
 
+	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+		PrintWriter writer = resp.getWriter();
+		resp.setContentType("application/json");
+		String studentNumber = req.getParameter("studentNumber");
+		String student = server.get(studentNumber);
+		if(student != null)
+			writer.write(student);
+		else
+			System.out.println("Student no found!");
+	}
+	
 	
 	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		ServletOutputStream output = resp.getOutputStream();
@@ -43,8 +54,4 @@ public class MainServlet extends HttpServlet{
 		  }
 	}
 	
-	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		PrintWriter writer = resp.getWriter();
-		resp.setContentType("application/json");		
-	}
 }

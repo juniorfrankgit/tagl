@@ -20,4 +20,20 @@ app.controller('Ctrl',['$scope', '$http',function($scope, $http) {
 			//error
 		});
 	};
+	
+	$scope.getStudent = function() {
+		var url = "http://localhost:8080/tagl/MainServlet";
+		var config = {
+        	headers : {
+            	'Content-Type': 'text/plain;charset=utf-8;'
+        	},
+        	params : {'studentNumber':$scope.studentNumber}
+     	};
+		$http.get(url,config).then(function(response){
+			//success
+			console.log("success");
+		}, function(response) {
+			console.log("error")
+		});
+	};
 }]);

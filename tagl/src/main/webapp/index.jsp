@@ -18,9 +18,9 @@
                 <label>Name </label><input type="text"ng-model="student.name"/><br/>
         	    <label>Firstname </label><input type="text" ng-model="student.firstname"/><br/>
         	    <label>Age </label><input type="text" name="age" ng-model="student.age"/><br/>
-        	    <label>Student number </label><input type="text" ng-model="student.number"/><br/> 
-    			<input type="button" value="SEND" ng-click="request()"/>
-            
+        	    <label>Student number </label><input type="text" ng-model="student.studentNumber"/><br/> 
+    			<input type="button" value="SEND" ng-click="request()"/><br><br>
+                <label>Search student by student number</label><input type="text" placeholder="student number" ng-model="studentNumber"></input><br/><input type="button" value="SEARCH" ng-click="getStudent()"></input>
             </form>
     </body>
 </html>
